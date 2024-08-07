@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(30, 38%, 92%);
+    width: 100%;
+}
+
+.main-content {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+.card {
+    max-width: 550px;
+    border-radius: 10px;
+    display: flex;
+    background-color: hsl(0, 0%, 100%);
+    margin: 0 auto;
+    min-width: 400px;
+    justify-content: space-between;
+}
+
+.image-product {
+    width: 50%;
+    height: 100%;
+   
+}
+
+.desktop-img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+}
+
+p.name {
+    color: hsl(228, 12%, 48%);
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+
+.card-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 20px;
+}
+
+h1 {
+    color: hsl(212, 21%, 14%);
+    font-size: 2rem;
+    font-family: "Young Serif", serif;
+}
+
+.product-description {
+    color: hsl(228, 12%, 48%);
+    letter-spacing: 1.1px;
+    font-size: 0.75rem;
+}
+
+h2 {
+    color: hsl(158, 36%, 37%);
+    font-size: 1.5rem;
+    font-family: "Young Serif", serif;
+}
+
+.price {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.former-price {
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+    font-size: 0.8rem;
+}
+
+.add-to-cart {
+    background-color: hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+    padding: 12px 4px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+}
+
+.fa {
+    font-size: 16px;
+    color: hsl(0, 0%, 100%);
+    padding-right: 6px;
+}
+
+.attribution {
+    color: hsl(228, 12%, 48%);
+    margin-top: 40px;
+    font-family: "Young Serif", serif;
+    font-size: 14px;
+    text-align: center;
+}
+
+.attribution a{
+    color: hsl(158, 36%, 37%)
+}
+
+
+
+@media only screen and (max-width: 375px){
+
+    .main-content {
+        padding: 0 20px;
+        max-width: 100%;
+    }
+
+    .card {
+        flex-direction: column;
+        margin: 40px auto 0 auto;
+        min-width: 200px;
+    }
+
+
+    .card-content {
+        width: 100%;
+    }
+
+    .image-product {
+        width: 100%;
+        padding: 20px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    img.mobile-img {
+        display: block;
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+}
