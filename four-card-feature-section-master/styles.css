@@ -1,0 +1,223 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+body {
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    background-color: hsl(0, 0%, 98%);
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+
+.main-content {
+    max-width: 100%;
+}
+
+.page-header {
+    max-width: 100%;
+    padding: 80px 28px;
+}
+
+.page-title {
+    color: hsl(229, 6%, 66%);
+    font-size: 1.8rem;
+    letter-spacing: 1.2px;
+}
+
+h1 {
+    color: hsl(234, 12%, 34%);
+    letter-spacing: 1.2px;
+    font-size: 1.8rem;
+}
+
+.header-description {
+    color: hsl(229, 6%, 66%);
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.cards-section {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 40px;
+    padding: 0 28px 80px 28px;
+}
+
+.card {
+    padding: 20px;
+    min-height: 300px;
+    box-shadow: 1px 1px 12px 2px hsla(229, 6%, 66%, 0.3);
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    color: hsl(229, 6%, 66%);
+    border-radius: 8px;
+} 
+
+.card h2 {
+    color: hsl(234, 12%, 34%);
+}
+
+.card p {
+    font-size: 1.2rem;
+}
+
+.card img {
+    margin-left: auto;
+    margin-top: auto;
+}
+
+.card-1 {
+    border-top: 5px solid hsl(180, 62%, 55%);
+}
+
+.card-2 {
+    border-top: 5px solid hsl(0, 78%, 62%);
+}
+
+.card-3 {
+    border-top: 5px solid hsl(34, 97%, 64%);
+}
+
+.card-4 {
+    border-top: 5px solid hsl(212, 86%, 64%);
+}
+
+.attribution {
+    text-align: center;
+    color: hsl(229, 6%, 66%);
+    padding-bottom: 40px;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+    .page-header {
+        text-align: center;
+    }
+
+    .page-title {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+
+    h1 {
+        letter-spacing: 1px;
+        font-size: 1.5rem;
+    }
+
+    .header-description {
+        margin: 0 auto;
+        width: 50%;
+        font-size: 1rem;
+    }
+
+    .card {
+        margin-bottom: 0;
+    }
+
+    .cards-section {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .card-1 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .card-2 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .card-3 {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .card-4 {
+        grid-column: 3;
+        grid-row: 3;
+    }
+
+    .card p {
+        font-size: 1rem;
+    }
+}
