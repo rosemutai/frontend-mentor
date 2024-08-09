@@ -1,0 +1,344 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+
+body {
+    background-color: hsl(210, 46%, 95%);
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    padding: 5rem 1rem;
+    font-family: "Manrope", sans-serif;
+}
+
+
+
+.card {
+    width: 96%;
+    margin: 0 auto;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 20px;
+    padding-bottom: 40px;
+}
+
+.product-image img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 50%;
+}
+
+
+.card-content {
+    padding: 40px;
+}
+
+h1 {
+    color: hsla(217, 19%, 35%, 0.7);
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 32px;
+    font-size: 1.8rem;
+}
+
+.card-description {
+    color: hsla(214, 17%, 51%, 0.7);
+    font-size: 1.6rem;
+}
+
+.author-share-option {
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+}
+
+.dp-name img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-top: auto;
+}
+
+.author-name {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dp-name {
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+}
+
+.share-btn {
+    display: none;
+
+}
+
+.active {
+    display: flex;
+    background-color: hsl(217, 19%, 35%);
+    padding: 40px;
+    margin-top: 40px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.active-share-btns {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+}
+
+.social-icon {
+    border: none;
+    outline: none;   
+    background-color: hsl(217, 19%, 35%);
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.name-date {
+    line-height: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+
+.name {
+    color: hsl(214, 17%, 51%);
+    font-weight: 700;
+}
+
+.date {
+    font-weight: 500;
+    color: hsla(214, 17%, 51%, 0.5);
+    font-size: 1.2rem;
+}
+
+.share-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 0;
+    border: none;
+    outline: none;
+    background-color: hsl(210, 46%, 95%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.share-button img {
+    width: 30px;
+    height: 30px;
+}
+
+.attribution {
+    margin: 80px 0;
+    text-align: center;
+}
+
+.name-date h2,
+.name-date p {
+    margin: 0; 
+}
+
+.share-text {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 6px;
+    color: hsl(212, 23%, 69%);
+    font-weight: 700;
+}
+
+
+@media only screen and (min-width: 768px){
+
+    body {
+        padding: 0;
+    }
+
+    .main-content {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        max-width: 50%;
+        display: flex;
+        max-height: 300px;
+        padding-bottom: 0;
+        border-radius: 10px;
+    }
+
+    h1 {
+        font-size: 1rem;
+        line-height: 24px;
+    }
+
+    .card-content {
+        padding: 20px;
+    }
+
+    .product-image,
+    .product-content {
+        width: 50%;
+    }
+
+    .product-content {
+        position: relative;
+    }
+    
+    .product-image img {
+        height: 100%;
+        border-radius: 0;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .card-description {
+        font-size: 0.8rem;
+    }
+
+    .dp-name img {
+        width: 30px;
+        height: 30px;
+        margin-top: auto;
+    }
+
+    .name {
+        font-size: 0.8rem;
+    }
+
+    .date  {
+        font-size: 0.6rem;
+    }
+    
+    .share-button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .share-button img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .name-date {
+        row-gap: 8px;
+    }
+
+    .active {
+        position: absolute;
+        top: 36%;
+        right: -12%;
+        padding: 10px;
+        border-radius: 8px;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .social-icon img {
+        width: 12px;
+        height: 12px;
+    }
+
+    .share-text {
+        font-size: 0.6rem;
+        letter-spacing: 2px; 
+        margin: 0;
+        line-height: 0;
+    }
+    .share-button-desktop {
+        display: none;
+    }
+
+    .active-share-btns {
+        column-gap: 0px;
+        margin-left: 4px;
+    }
+}
