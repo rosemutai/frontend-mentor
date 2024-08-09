@@ -248,7 +248,7 @@ h1 {
     .card {
         max-width: 50%;
         display: flex;
-        max-height: 300px;
+        max-height: 260px;
         padding-bottom: 0;
         border-radius: 10px;
     }
@@ -312,7 +312,7 @@ h1 {
 
     .active {
         position: absolute;
-        top: 36%;
+        top: 40%;
         right: -12%;
         padding: 10px;
         border-radius: 8px;
@@ -320,6 +320,20 @@ h1 {
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+
+    .active::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid hsl(217, 19%, 35%);
     }
     
     .social-icon img {
