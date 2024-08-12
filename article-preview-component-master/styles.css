@@ -96,6 +96,7 @@ body {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     height: 50%;
+    width: 100%;
 }
 
 
@@ -231,7 +232,7 @@ h1 {
 }
 
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 992px){
 
     body {
         padding: 0;
@@ -248,7 +249,7 @@ h1 {
     .card {
         max-width: 50%;
         display: flex;
-        max-height: 260px;
+        min-height: 260px;
         padding-bottom: 0;
         border-radius: 10px;
     }
