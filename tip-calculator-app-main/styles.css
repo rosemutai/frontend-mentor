@@ -1,0 +1,247 @@
+:root {
+    --strongCyan: hsl(172, 67%, 45%);
+    --verDarkCyan: hsl(183, 100%, 15%);
+    --darkgrayishCyan: hsl(186, 14%, 43%);
+    --grayishCyan: hsl(184, 14%, 56%);
+    --lightGrayishCyan: hsl(185, 41%, 84%);
+    --veryLightGrayishCyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: 100%;
+    /* overflow-x: hidden; */
+}
+
+header {
+    background-color: var(--lightGrayishCyan);
+    padding: 1.5em 0;
+}
+
+h1 {
+    color: var(--darkgrayishCyan);
+    text-align: center;
+    line-height: 32px;
+    letter-spacing: 1.6px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.content {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-top: -12px;
+    padding: 2em 1.5em;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+}
+
+.bill-input,
+.number-of-people,
+.select-tip {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+.bill-title,
+.select-tip p,
+.number-of-people p {
+    color: hsl(186, 14%, 43%);
+    letter-spacing: 1.2px;
+    font-weight: 600;
+}
+
+input {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: var(--veryLightGrayishCyan);
+    /* text-align: end; */
+    color: var(--veryDarkCyan);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+input::placeholder {
+    color: var(--grayishCyan);
+    font-weight: 500;
+}
+
+.tip-buttons {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 160px);
+    gap: 12px;
+    padding-right: 1em;
+}
+
+#zero-error {
+    color: red;
+    float: right;
+    font-size: 12px;
+}
+
+.title-error {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+}
+
+.tip-btn {
+    background-color: var(--verDarkCyan);
+    height: 42px;
+    border: none;
+    outline: 0;
+    border-radius: 4px;
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.active {
+    background-color: var(--strongCyan);
+    color: var(--verDarkCyan);
+} 
+
+.custom-btn {
+    background-color: var(--veryLightGrayishCyan);
+    color: var(--verDarkCyan);
+}
+
+.results {
+    border-radius: 8px;
+    padding: 2em 1em;
+    background-color: var(--verDarkCyan);
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+
+.tip-amount h2,
+.total-money h2 {
+    color: var(--white);
+    font-size: 14px;
+    letter-spacing: 1.1px;
+    font-weight: 500;
+}  
+
+.tip-amount,
+.total-money {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tip-amount h2 span,
+.total-money h2 span {
+    font-size: 10px;
+    color: var(--lightGrayishCyan);
+    letter-spacing: 1px;
+}
+
+.amount {
+    color: var(--strongCyan);
+    font-weight: 600;
+    font-size: 1.8em;
+}
+
+.reset-btn {
+    width: 100%;
+    height: 42px;
+    border: none;
+    outline: 0;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    background-color: var(--strongCyan);
+    color: var(--verDarkCyan);
+    margin: 0 auto;
+    cursor: pointer;
+    opacity: 0.2;
+}
+
+
+.attribution{
+    padding: 1em;
+    color: var(--darkgrayishCyan);
+    text-align: center;
+}
+
+.attribution a {
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    color: var(--strongCyan);
+
+}
+
+@media only screen and (min-width: 600px)  {
+
+    body {
+        background-color: var(--lightGrayishCyan);
+     
+    }
+    .content {
+        display: flex;
+        background-color: red;
+        flex-direction: row;
+        max-width: 700px;
+        column-gap: 12px;
+        margin: 0 auto;
+        background-color: var(--white);
+        border-radius: 20px;
+    }
+
+    .left-section {
+        width: 50%;
+    }
+
+    .results {
+        width: 50%;
+        padding: 2em 1em;
+        row-gap: 24px;
+    }
+
+    .tip-buttons {
+        display: grid;
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .bill-input,
+    .select-tip,
+    .tip-buttons {
+       padding-bottom: 12px;
+    }
+    
+    .bill-title,
+    .select-tip p,
+    .number-of-people p {
+       font-size: 12px;
+    }
+
+    .reset {
+        margin-top: auto;
+    }
+
+    .tip-btn,
+    .reset-btn {
+        font-size: 16px;
+    } 
+}

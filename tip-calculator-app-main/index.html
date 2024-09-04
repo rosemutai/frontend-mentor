@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  
+</head>
+<body>
+<main>
+  <section class="calculator">
+    <header>
+      <h1>
+        SPLI<br>TTER
+      </h1>
+    </header>
+    <section class="content">
+      <div class="left-section">
+        <div class="bill-input">
+          <p class="bill-title">Bill</p>
+          <input type="text" name="bill" id="bill-input" placeholder="0">
+        </div>
+        <div class="select-tip">
+          <p class="select-tip">Select Tip %</p>
+          <div class="tip-buttons">
+            <button class="tip-btn" id="five-tip">5%</button>
+            <button class="tip-btn" id="ten-tip">10%</button>
+            <button class="tip-btn" id="fifteen-tip">15%</button>
+            <button class="tip-btn" id="twenty-five-tip">25%</button>
+            <button class="tip-btn" id="fifty-tip">50%</button>
+            <button class="tip-btn custom-btn">Custom</button>
+          </div>
+        </div>
+        <div class="number-of-people">
+          <div class="">
+            <p class="number-of-people">Number of People</p>
+          <span id="zero-error"></span>
+          </div>
+          
+          <input type="number" min="1" name="number-people" class="error-border"
+          id="number-of-people" placeholder="0">
+        </div>
+      </div>
+      <section class="results right-section">
+        <div class="tip-amount">
+          <h2>Tip Amount <br> <span>/ person</span></h2>
+          <h3 class="amount" id="tip-amount">$0.00</h3>
+        </div>
+  
+        <div class="total-money">
+          <h2>Total <br> <span>/ person</span></h2>
+          <h3 class="amount" id="total-amount">$0.00</h3>
+        </div>
+        <div class="reset">                              
+          <button type="reset" class="reset-btn" id="reset-Button">RESET</button>
+        </div>
+      </section>
+    </section>
+    
+  
+  </section>
+</main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/rosemutai">rosemutai</a>.
+  </div>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
