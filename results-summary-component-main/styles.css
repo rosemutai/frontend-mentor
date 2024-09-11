@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --lightRed: hsl(0, 100%, 67%);
+    --orangeYellow: hsl(39, 100%, 56%);
+    --greenTeal: hsl(166, 100%, 37%);
+    --cobaltBlue: hsl(234, 85%, 45%);
+    --lightSlateBlue: hsl(252, 100%, 67%);
+    --lightRoyalBlue: hsl(241, 81%, 54%);
+    --violetBlue: hsla(256, 72%, 46%, 1);
+    --persianBlue: hsla(241, 72%, 46%, 0);
+    --white: hsl(0, 0%, 100%);
+    --paleBlue: hsl(221, 100%, 96%);
+    --lightLavender: hsl(241, 100%, 89%);
+    --darkGrayBlue: hsl(224, 30%, 27%);
+}
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Hanken Grotesk", sans-serif;
+}
+
+p {
+    font-size: 16px;
+}
+
+.card {
+    box-shadow: 2px 2px 16px 2px hsla(241, 81%, 54%, 0.2);
+    border-radius: 12px;
+    display: flex;
+    max-width: 500px;
+    min-height: 300px;
+}
+
+.left-section{
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    align-items: center;
+    padding: 28px;
+    border-radius: 12px;
+    width: 50%;
+    background: linear-gradient(var(--lightSlateBlue), var(--lightRoyalBlue))
+}
+
+.result-title {
+    color: hsla(0, 0%, 100%, 0.5);
+}
+
+.circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    background: linear-gradient(var(--violetBlue), var(--persianBlue));
+}
+
+.circle h1 {
+    font-size: 32px;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    row-gap: 8px;
+}
+
+.small-cards {
+    display: flex;
+    flex-direction: column;
+    row-gap: 14px;
+}
+
+.circle p,
+.bottom p {
+    color: hsla(0, 0%, 100%, 0.5);
+    font-size: 14px;
+}
+
+.right-section {
+    width: 50%;
+    padding: 28px;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 12px;
+    row-gap: 20px;
+}
+
+.summary-title {
+    color: var(--darkGrayBlue);
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.small-card {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px;
+    border-radius: 8px;
+    align-items: center;
+    height: 40px;
+}
+
+.small-card .left {
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+}
+
+.card-title {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.percentage {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.percentage span {
+    color: hsla(224, 30%, 27%, 0.4);
+    font-weight: 600;
+
+}
+
+.description {
+    text-align: center;
+}
+
+.continue-btn {
+    margin-top: auto;
+    border-radius: 20px;
+    padding: 12px;
+    border: none;
+    outline: none;
+    background-color: var(--darkGrayBlue);
+    color: hsla(0, 0%, 100%, 0.8);
+}
+
+.continue-btn:hover {
+    background: var(--cobaltBlue);
+    color: var(--white);
+}
+
+.attribution,
+.attribution a {
+    margin-top: 100px;
+    text-decoration: none;
+    color: var(--darkGrayBlue);
+}
+
+.attribution a {
+    color: var(--lightRoyalBlue);
+}
+
+.Reaction {
+    color: var(--lightRed);
+}
+
+.Memory {
+    color: var(--orangeYellow);
+}
+
+.Verbal {
+    color: var(--greenTeal);
+}
+
+.Visual {
+    color: var(--violetBlue);
+}
+
+[data-name = "Reaction"] {
+    background-color: hsla(0, 100%, 67%, 0.06);
+}
+
+[data-name = "Memory"] {
+    background-color: hsla(39, 100%, 56%, 0.06);
+}
+
+[data-name = "Verbal"] {
+    background-color: hsla(166, 100%, 37%, 0.06);
+}
+
+[data-name = "Visual"] {
+    background-color: hsla(221, 100%, 96%, 0.6);
+}
+
+[data-name = "Visual"] .cardTitle {
+    color: var(--violetBlue);
+}
+
+@media only screen and (max-width: 992px) {
+    body {
+        height: 100dvh;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+
+    .left-section {
+        padding-top: 42px;
+        width: 100%;
+        justify-content: start;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        margin-bottom: -24px;
+        z-index: 12;
+    }
+
+    .right-section {
+        padding-top: 36px;
+        width: 100%;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    .description {
+        text-align: start;
+        width: 80%;
+    }
+}
