@@ -33,7 +33,7 @@ const ProductList = () => {
     }, []);
 
   return (
-    <div className="product-lists grid md:grid-cols-3 md:gap-4 w-full overflow-x-hidden">
+    <div className="product-lists grid grid-cols-1 md:grid-cols-3 md:gap-4 w-full overflow-x-hidden">
         {showModal && <Modal />}
         <div className="product-section col-span-2">
             <h1 className="dessert-title text-Rose-900 font-bold text-2xl mb-4">Desserts</h1>
@@ -52,7 +52,7 @@ const ProductList = () => {
                 ))}
             </div>
         </div>
-        <div className="cart-section col-span-1 bg-Rose-50 p-5 h-min rounded-md">
+        <div className="cart-section col-span-1 bg-Rose-50 p-5 h-min rounded-md mt-8 md:mt-0">
             <h2 className="cart-title text-Red font-bold py-2 text-xl">Your Cart ({cart.length})</h2>
             {cart.length == 0 ? (
                 <div className="empty-cart mt-3">

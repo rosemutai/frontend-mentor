@@ -16,11 +16,11 @@ const SingleProduct = ({image, name, category, price, addToCart, removeFromCart}
                 <div className="product-image w-full relative rounded-md">
 
                     <picture>
-                        <source srcSet={`${image.desktop}`} media="(min-width: 1024px)"/>
-                        <source srcSet={`${image.tablet}`} media="(min-width: 768px)"/>
-                        <source srcSet={`${image.mobile}`} media="(min-width: 640px)"/>
+                        <source srcSet={image.desktop} media="(min-width: 1024px)"/>
+                        <source srcSet={image.tablet} media="(min-width: 768px)"/>
+                        <source srcSet={image.mobile} media="(min-width: 640px)"/>
 
-                        <img src={`${image}`} alt={name} className='w-full rounded-t-md'/>
+                        <img src={image.mobile} alt={name} className='w-full rounded-t-md'/>
 
                     </picture>
                     
