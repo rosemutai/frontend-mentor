@@ -42,7 +42,7 @@ const ProductList = () => {
                     
                     <SingleProduct
                         key={index}
-                        image = {product.image.tablet}
+                        image = {product.image}
                         name = {product.name}
                         category = {product.category}
                         price = {product.price}

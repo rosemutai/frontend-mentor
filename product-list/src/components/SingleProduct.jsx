@@ -14,7 +14,15 @@ const SingleProduct = ({image, name, category, price, addToCart, removeFromCart}
         <div className="single-product max-w-full overflow-x-hidden">
             <div className="card flex flex-col rounded-md p-3">
                 <div className="product-image w-full relative rounded-md">
-                    <img src={`${image}`} alt={name} className='w-full rounded-t-md'/>
+
+                    <picture>
+                        <source srcSet={`${image.desktop}`} media="(min-width: 1024px)"/>
+                        <source srcSet={`${image.tablet}`} media="(min-width: 768px)"/>
+                        <source srcSet={`${image.mobile}`} media="(min-width: 640px)"/>
+
+                        <img src={`${image}`} alt={name} className='w-full rounded-t-md'/>
+
+                    </picture>
                     
                 </div>
                 <div className="button flex justify-center -mt-5 z-10">
