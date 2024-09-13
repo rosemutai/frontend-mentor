@@ -27,6 +27,7 @@ const ProductList = () => {
                 return response.json()
             })
             .then((data) => {
+                console.log(data)
                 setProducts(data)
             })
     }, []);

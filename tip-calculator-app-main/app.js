@@ -7,17 +7,16 @@ const tipButtons = document.getElementsByClassName('tip-btn')
 
 const resetButton = document.getElementById('reset-Button')
 const errorSpan = document.getElementById('zero-error')
+const customValue = document.getElementById('custom-value')
 
-console.log(billInput.value )
 Array.from(tipButtons).forEach(btn => {
 
     btn.addEventListener('click', () => {
         const tipPercent = parseInt(btn.innerHTML)
-        console.log(tipPercent)
         btn.classList.add('active')
         numberOfPeople.addEventListener('keydown', (event) => {
             if(event.key === 'Enter') {
-                console.log(numberOfPeople.value)
+    
                 validateInput()
                 const billPerPerson = parseFloat(billInput.value) / parseInt(numberOfPeople.value)
                 const tipPerPerson = billPerPerson * (tipPercent / 100)
@@ -30,6 +29,26 @@ Array.from(tipButtons).forEach(btn => {
     })
     
 });
+
+const addCustomTip = () => {
+    customValue.addEventListener('click', () => {
+        const tipPercent = parseInt(customValue.innerHTML)
+        console.log(tipPercent)
+        customValue.classList.add('active')
+        numberOfPeople.addEventListener('keydown', (event) => {
+            if(event.key === 'Enter') {
+    
+                validateInput()
+                const billPerPerson = parseFloat(billInput.value) / parseInt(numberOfPeople.value)
+                const tipPerPerson = billPerPerson * (tipPercent / 100)
+                const totalPerPerson = billPerPerson + tipPerPerson
+                tipAmount.innerHTML = tipPerPerson.toFixed(2)
+                totalAmount.innerHTML = totalPerPerson.toFixed(2) 
+                resetButton.style.opacity = '0.9'
+            }
+        })
+    })
+}
 
 const resetBtn = () => {
     if(parseFloat(billInput.value) >=1 && parseInt(numberOfPeople.value)) {
