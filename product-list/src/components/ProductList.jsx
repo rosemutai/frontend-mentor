@@ -55,7 +55,7 @@ const ProductList = () => {
         <div className="cart-section col-span-1 bg-Rose-50 p-5 h-min rounded-md mt-8 md:mt-0">
             <h2 className="cart-title text-Red font-bold py-2 text-xl">Your Cart ({cart.length})</h2>
             {cart.length == 0 ? (
-                <div className="empty-cart mt-3">
+                <div className="empty-cart mt-3 w-full">
                     <img src={emptyCart} alt="Empty cart illustration" className="mx-auto" />
                     <p className="empty-cart-text text-Rose-400 font-medium mt-2 text-sm text-center">You added items will appear here</p>
                 </div>
